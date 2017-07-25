@@ -1,0 +1,40 @@
+{
+  "name": "node-red-contrib-coap-rd",
+  "version": "0.0.1",
+  "description": "CoAP Resource Directory support in Node-RED",
+  "scripts": {
+    "test": "NODE_ENV=test mocha --require ./test/test_helper.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Ell-i/node-red-contrib-coap-rd.git"
+  },
+  "keywords": [
+    "node-red",
+    "node-red-contrib"
+  ],
+  "node-red": {
+    "nodes": {
+      "coap-rd": "coap-rd/coap-rd.js"
+    }
+  },
+  "author": {
+    "name": "Pekka Nikander",
+    "email": "pekka.nikander@iki.fi"
+  },
+  "bugs": {
+    "url": "https://github.com/Ell-i/node-red-contrib-coap-rd/issues"
+  },
+  "engines": {
+    "node": ">= 8.0.0"
+  },
+  "files": [
+    "coap-rd/",
+    "test/"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/Ell-i/node-red-contrib-coap-rd",
+  "dependencies": {
+    "coap-rd": "https://github.com/Ell-i/coap-rd/tarball/XXX"
+  }
+}
