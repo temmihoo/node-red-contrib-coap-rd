@@ -22,18 +22,17 @@ module.exports = function(RED) {
 	    console.log(ep);
 	    // XXX It is silly that we cannot pass URL as an object...
 	    var url = URI.serialize(ep.con);
-	    const res = ep.resources && ep.resources[0];
-	    console.log(res);
-	    if (res) {
-		if (res.href) url += res.href;
+	    if (ep.resources) {
+		ep.resources.forEach((res) => {
+		    url += res.href;
+		    console.log("url=" + url);
+		    const newMsg = {
+			url:   url,
+			ep:    ep,
+		    };
+		    node.send(newMsg);
+		});
 	    }
-	    
-	    console.log("url=" + url);
-	    const newMsg = {
-		url: url,
-		ep:  ep,
-	    };
-	    node.send(newMsg);
 	}
 
 	RD.on('register', function(ep) { report(ep); });
