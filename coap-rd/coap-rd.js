@@ -24,12 +24,11 @@ module.exports = function(RED) {
 	    var url = URI.serialize(ep.con);
 	    if (ep.resources) {
 		ep.resources.forEach((res) => {
-		    url += res.href;
-		    console.log("url=" + url);
 		    const newMsg = {
-			url:   url,
+			url:   url + res.href,
 			ep:    ep,
 		    };
+		    console.log("url=" + newMsg.url);
 		    node.send(newMsg);
 		});
 	    }
