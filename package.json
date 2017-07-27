@@ -35,6 +35,7 @@
   "license": "MIT",
   "homepage": "https://github.com/Ell-i/node-red-contrib-coap-rd",
   "dependencies": {
-    "coap-rd": "https://github.com/Ell-i/coap-rd/tarball/XXX"
+    "coap-rd": "https://github.com/Ell-i/coap-rd/tarball/XXX",
+    "uri-js": "^3.0.2"
   }
 }

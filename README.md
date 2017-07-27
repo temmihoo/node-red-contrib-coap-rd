@@ -24,3 +24,9 @@ git clone https://github.com/Ell-i/node-red-contrib-coap-rd.git
 cd ./node-red-contrib-coap-rd
 npm install
 ```
+
+Resource Directory Event handling
+---------------------------------
+TBD
+
+

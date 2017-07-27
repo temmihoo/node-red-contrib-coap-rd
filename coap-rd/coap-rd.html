@@ -9,7 +9,8 @@
         category: 'input',
         color: '#a6bbcf',
         defaults: {
-            name:     { value:"CoAP RD"}
+	    domain:   { calue: "local" },
+            name:     { value: "CoAP RD" },
         },
         outputs:1,
         icon: "white-globe.png",
@@ -25,12 +26,16 @@
 
 <script type="text/x-red" data-template-name="coap-rd">
     <div class="form-row">
+        <label for="node-input-domain"><i class="fa fa-tag"></i> Default domain</label>
+        <input type="text" id="node-input-domain" placeholder="local"/>
+    </div>
+    <div class="form-row">
         <label for="node-input-name"><i class="fa fa-tag"></i> Name</label>
         <input type="text" id="node-input-name" placeholder="CoAP RD"/>
     </div>
 </script>
 
-<script type="text/x-red" data-help-name="nordpool">
+<script type="text/x-red" data-help-name="coap-rd">
   <p>Provides a node that implements CoAP RD and generates events
     whenever CoAP nodes register, update, or deregister.</p>
 </script>
